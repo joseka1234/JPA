@@ -17,6 +17,8 @@
 		<class>modelo.Voluntario</class>
 		<class>modelo.Menu_Voluntario</class>
 		<class>modelo.Empleado</class>
+		<class>modelo.Cocinero</class>
+		<class>modelo.Camarero</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/mydb"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
