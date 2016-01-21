@@ -20,6 +20,7 @@
 		<class>modelo.Cocinero</class>
 		<class>modelo.Camarero</class>
 		<class>modelo.Menu_Cocinado</class>
+		<class>modelo.Menu_Servido</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/mydb"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
