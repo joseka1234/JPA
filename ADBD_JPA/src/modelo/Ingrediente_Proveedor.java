@@ -1,4 +1,4 @@
-package main;
+package modelo;
 
 import java.sql.Date;
 
@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @IdClass(IPKey.class)
 @Table(name="INGREDIENTE_PROVEEDOR")
 public class Ingrediente_Proveedor {
-
 	@Id
 	@Basic(optional=false)
 	private int id_ingrediente;
