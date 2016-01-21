@@ -24,7 +24,7 @@ public class Menu_Comida {
 		return 	"Menu: " + getId_menu() +
 				"\nComida: " + getId_comida() +
 				"\nCantidad: " + getCantidad() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Getters y setters

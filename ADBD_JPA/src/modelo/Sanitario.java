@@ -32,7 +32,8 @@ public class Sanitario {
 				"\nTelefono: " + getTelefono() +
 				"\nSueldo: " + getSueldo() +
 				"\nConsulta: " + getConsulta() +
-				"\nEspecialidad: " + getEspecialidad();
+				"\nEspecialidad: " + getEspecialidad() +
+				"\n\n";
 	}
 	
 	// Getters y setters

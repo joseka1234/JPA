@@ -36,7 +36,7 @@ public class Ingrediente_Proveedor {
 				"\nCantidad: " + getCantidad() +
 				"\nPrecio: " + getPrecio() +
 				"\nFecha caducidad: " + getFecha_caducidad() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Getters y setters

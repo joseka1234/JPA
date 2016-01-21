@@ -24,7 +24,7 @@ public class Comida_Ingrediente {
 		return 	"Comida: " + getId_comida() +
 				"\nIngrediente: " + getId_ingrediente() +
 				"\nCantidad" + getCantidad() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Getters y setters

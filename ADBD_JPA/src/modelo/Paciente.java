@@ -27,7 +27,7 @@ public class Paciente {
 				"\nApellido: " + getApellido() +
 				"\nTelefono: " + getTelefono() +
 				"\nSanitario: " + getDni_sanitario() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Gettesr y setters

@@ -17,7 +17,7 @@ public class Main2 {
         EntityTransaction tx = em.getTransaction(); 
         
     	// Creamos la query (consulta).
-        Query query = em.createQuery("SELECT I FROM Ingrediente I");
+        Query query = em.createQuery("SELECT I FROM Ingrediente_Proveedor I");
         
     	// 10 resultados como mucho.
         query.setMaxResults(10);

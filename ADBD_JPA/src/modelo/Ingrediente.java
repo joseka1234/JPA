@@ -46,7 +46,7 @@ public class Ingrediente {
 				"\nGluten: " + isGluten() +
 				"\nCantidad: " + getCantidad() + 
 				"\nFecha de caducidad: " + getFecha_caducidad() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Getters y setters

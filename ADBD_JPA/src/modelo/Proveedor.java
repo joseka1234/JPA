@@ -24,7 +24,7 @@ public class Proveedor {
 				"\nNombre: " + getNombre() +
 				"\nTelefono: " + getTelefono() +
 				"\nEspecialidad: " + getEspecialidad() +
-				"\n";
+				"\n\n";
 	}
 
 	// Getters y setters

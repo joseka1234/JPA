@@ -18,7 +18,7 @@ public class Menu {
 	public String toString() {
 		return 	"ID: " + getId_menu() +
 				"\nNombre: " + getNombre() +
-				"\n";
+				"\n\n";
 	}
 	
 	// Getters y settesr
