@@ -1,6 +1,6 @@
 package main;
 
-import java.util.Vector;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +10,6 @@ import javax.persistence.Query;
 
 public class Main2 { 
 
-	
     public static void main(String[] args) { 
         EntityManagerFactory emf = 
             Persistence.createEntityManagerFactory("ADBD_JPA"); 
@@ -18,13 +17,13 @@ public class Main2 {
         EntityTransaction tx = em.getTransaction(); 
         
     	// Creamos la query (consulta).
-        Query query = em.createQuery("SELECT c FROM Usuario c");
+        Query query = em.createQuery("SELECT I FROM Ingrediente I");
         
     	// 10 resultados como mucho.
         query.setMaxResults(10);
         
         // Obtenemos el vector de resultados de la BD.
-    	Vector<String> list =  (Vector<String>) query.getResultList();
+    	List<String> list =  query.getResultList();
     	
     	// Imprimimos vector de resultados.
     	System.out.println(list);
