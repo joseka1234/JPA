@@ -47,29 +47,28 @@ public class Consultas {
 	}
 
 	public boolean addPacienteCome(String dni_paciente, String nombreMenu, Date fecha) {
-		
-		int id_menu = getEm().createQuery(QUERY_ID_MENU).setParameter("menuName", nombreMenu).getFirstResult();
-		Paciente_Come pc = new Paciente_Come();
-		
-		pc.setDni_paciente(dni_paciente);
-		pc.setId_menu(id_menu);
-		pc.setFecha(fecha);
-		
+		int id_menu = (int) getEm().createQuery(QUERY_ID_MENU).setParameter("menuName", nombreMenu).getSingleResult();
+
+		Paciente_Come paciente_come = new Paciente_Come();
+		paciente_come.setDni_paciente(dni_paciente);
+		paciente_come.setId_menu(id_menu);
+		paciente_come.setFecha(fecha);
+
 		getTx().begin();
 		try {
-			getEm().persist(pc);
+			getEm().persist(paciente_come);
 			getTx().commit();
 			return true;
 		} catch (Exception e) {
-			getTx().rollback();
 			return false;
 		}
 	}
 
 	public long existeDni(String dniPaciente) {
-		long countDNI = (long)getEm().createQuery(QUERY_COUNT).setParameter("dniPaciente", dniPaciente).getSingleResult();
+		long countDNI = (long) getEm().createQuery(QUERY_COUNT).setParameter("dniPaciente", dniPaciente)
+				.getSingleResult();
 		return countDNI;
-		
+
 	}
 
 	public void close() {

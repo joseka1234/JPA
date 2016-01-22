@@ -15,9 +15,9 @@ public class Interfaz extends JFrame{
 		setTitle(TITULO);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-        setPanelAbajo(new PanelAbajo ());
-        setPanelCentro(new PanelCentro ());
         setPanelSuperior(new PanelSuperior ());
+        setPanelAbajo(new PanelAbajo (getPanelSuperior()));
+        setPanelCentro(new PanelCentro ());
         
         add (getPanelCentro(),  BorderLayout.CENTER);
         add (getPanelAbajo(), BorderLayout.SOUTH);

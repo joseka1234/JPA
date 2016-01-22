@@ -22,8 +22,10 @@ public class PanelAbajo extends JPanel {
 	private JComboBox menusDisponibles;
 	private JButton boton;
 	private Consultas consultas;
+	private PanelSuperior auxPanel;
 
-	public PanelAbajo() {
+	public PanelAbajo(PanelSuperior panel) {
+		setAuxPanel(panel);
 		setConsultas(new Consultas());
 		setMenus(new ArrayList<String>());
 		setInformacion(new JLabel("Menús disponibles"));
@@ -59,17 +61,18 @@ public class PanelAbajo extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (PanelSuperior.isDniCorrecto()) {
+					boolean log;
 					java.util.Date fechaActual = new java.util.Date();
 					Date actual = new Date(fechaActual.getYear(), fechaActual.getMonth(), fechaActual.getDay());
-					getConsultas().addPacienteCome(PanelSuperior.getDni(),
-							getMenusDisponibles().getSelectedItem().toString(), actual);
-					/*
-					 * TODO: una vez realizada la busqueda anterior, solo
-					 * mostrar este mensaje de debajo si se ha insertado la
-					 * fila, si no mostrar el de error como abajo, en el else
-					 */
-
-					VentanasEmergentes.mostrarInformacion("Se ha realizado el pedido", "Información");
+					log = getConsultas().addPacienteCome(getAuxPanel().getDni_paciente().getText(),
+							getMenusDisponibles().getSelectedItem().toString(), actual); 
+					if(log)
+						VentanasEmergentes.mostrarInformacion("Se ha realizado el pedido", "Información");
+					else {
+						String cuerpo2 = "No se ha podido introducir el pedido";
+						String titulo2 = "Error de insercion";
+						VentanasEmergentes.mostrarError(cuerpo2, titulo2);
+					}
 				} else {
 					String cuerpo = "Introduce un DNI de un paciente del hospital";
 					String titulo = "ERROR, DNI incorrecto";
@@ -149,6 +152,14 @@ public class PanelAbajo extends JPanel {
 
 	public void setConsultas(Consultas consultas) {
 		this.consultas = consultas;
+	}
+
+	public PanelSuperior getAuxPanel() {
+		return auxPanel;
+	}
+
+	public void setAuxPanel(PanelSuperior auxPanel) {
+		this.auxPanel = auxPanel;
 	}
 
 }

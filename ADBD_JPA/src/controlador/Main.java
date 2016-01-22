@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) { 
 		Interfaz interfaz = new Interfaz ();
 		interfaz.validate();
+		
 
 //        EntityManagerFactory emf = 
 //            Persistence.createEntityManagerFactory("ADBD_JPA"); 
