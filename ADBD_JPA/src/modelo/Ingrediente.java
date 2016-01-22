@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="INGREDIENTE")
-public class Ingrediente {
+public class Ingrediente extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_ingrediente;

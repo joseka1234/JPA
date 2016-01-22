@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="COMIDA")
-public class Comida {
+public class Comida extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_comida;

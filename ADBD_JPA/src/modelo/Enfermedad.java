@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ENFERMEDAD")
-public class Enfermedad {
+public class Enfermedad extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_enfermedad;

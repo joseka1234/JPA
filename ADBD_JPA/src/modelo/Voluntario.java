@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="VOLUNTARIO")
-public class Voluntario {
+public class Voluntario extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private String dni_voluntario;

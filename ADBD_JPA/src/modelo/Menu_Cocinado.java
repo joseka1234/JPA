@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(MCoKey.class)
 @Table(name="MENU_COCINADO")
-public class Menu_Cocinado {
+public class Menu_Cocinado extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private String dni_empleado;

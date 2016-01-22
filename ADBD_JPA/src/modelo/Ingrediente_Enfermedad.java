@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(IEKey.class)
 @Table(name="INGREDIENTE_ENFERMEDAD")
-public class Ingrediente_Enfermedad {
+public class Ingrediente_Enfermedad extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_ingrediente;

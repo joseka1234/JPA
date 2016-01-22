@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(PCKey.class)
 @Table(name="PACIENTE_COME")
-public class Paciente_Come {
+public class Paciente_Come extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private String dni_paciente;

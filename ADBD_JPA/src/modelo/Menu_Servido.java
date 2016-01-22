@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(MSeKey.class)
 @Table(name="MENU_SERVIDO")
-public class Menu_Servido {
+public class Menu_Servido extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private String dni_empleado;

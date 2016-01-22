@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import controlador.Consultas;
 import utils.VentanasEmergentes;
 
 @SuppressWarnings("serial")
@@ -21,8 +22,10 @@ public class PanelSuperior extends JPanel{
 	private JButton boton;
 	private static boolean dniCorrecto;
 	private static String dni;
+	private Consultas consultas;
 
 	public PanelSuperior () {
+		setConsultas(new Consultas());
 		setDniCorrecto(false);
 		setInformacion(new JLabel ("DNI del paciente: "));
 		getInformacion().setHorizontalAlignment(JLabel.RIGHT);
@@ -32,14 +35,10 @@ public class PanelSuperior extends JPanel{
 		getBoton().addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/* TODO: 	SELECT count(*)
-				 * 			FROM PACIENTE
-				 * 			WHERE dni_paciente = getDni_paciente().getText();
-				 * 
-				 * 			Si count==1 setDniCorrecto (true);
-				 * 			Si no, setDniCorrecto (false)
-				 */
-
+				if(getConsultas().existeDni(getDni_paciente().getText()) == 1)
+					setDniCorrecto(true);
+				else
+					setDniCorrecto(false);
 				if (isDniCorrecto()) {
 					getDni_paciente().setBackground(Color.GREEN);
 					setDni(getInformacion().getText());
@@ -124,5 +123,13 @@ public class PanelSuperior extends JPanel{
 	 */
 	private void setDni(String dni) {
 		this.dni = dni;
+	}
+
+	public Consultas getConsultas() {
+		return consultas;
+	}
+
+	public void setConsultas(Consultas consultas) {
+		this.consultas = consultas;
 	}
 }

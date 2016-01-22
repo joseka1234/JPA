@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(MVKey.class)
 @Table(name="MENU_VOLUNTARIO")
-public class Menu_Voluntario {
+public class Menu_Voluntario extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_menu;

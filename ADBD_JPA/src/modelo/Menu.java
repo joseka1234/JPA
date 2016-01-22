@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="MENU")
-public class Menu {
+public class Menu extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_menu;

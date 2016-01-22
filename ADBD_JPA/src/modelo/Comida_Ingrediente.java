@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(CIKey.class)
 @Table(name="COMIDA_INGREDIENTE")
-public class Comida_Ingrediente {
+public class Comida_Ingrediente extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private int id_comida;

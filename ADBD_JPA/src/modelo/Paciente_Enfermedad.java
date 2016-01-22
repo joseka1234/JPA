@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @IdClass(PEKey.class)
 @Table(name="PACIENTE_ENFERMEDAD")
-public class Paciente_Enfermedad {
+public class Paciente_Enfermedad extends Tabla  {
 	@Id
 	@Basic(optional=false)
 	private String dni_paciente;
