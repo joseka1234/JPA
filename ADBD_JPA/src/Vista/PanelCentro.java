@@ -1,6 +1,7 @@
 package Vista;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -12,6 +13,7 @@ public class PanelCentro extends JPanel{
 	
 	public PanelCentro () {
 		setTexto(new JTextArea ());
+		getTexto().setFont(new Font("SansSerif",0,16));
 		JScrollPane scroll = new JScrollPane (getTexto());
 		setLayout(new BorderLayout());
 		add (scroll, BorderLayout.CENTER);
