@@ -13,6 +13,7 @@ public class Paciente_Enfermedad {
 	@Id
 	@Basic(optional=false)
 	private String dni_paciente;
+	@Id
 	@Basic(optional=false)
 	private int id_enfermedad;
 	
