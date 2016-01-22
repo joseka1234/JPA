@@ -13,7 +13,7 @@ public class PanelCentro extends JPanel{
 	
 	public PanelCentro () {
 		setTexto(new JTextArea ());
-		getTexto().setFont(new Font("SansSerif",0,16));
+		getTexto().setFont(new Font("SansSerif",0,20));
 		JScrollPane scroll = new JScrollPane (getTexto());
 		setLayout(new BorderLayout());
 		add (scroll, BorderLayout.CENTER);
